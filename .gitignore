@@ -1,0 +1,6 @@
+!*src*.java
+!pom.xml
+!.gitignore
+.idea/
+logs/
+target/
