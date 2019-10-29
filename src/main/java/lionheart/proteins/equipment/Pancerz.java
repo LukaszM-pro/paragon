@@ -1,8 +1,17 @@
 package lionheart.proteins.equipment;
 
-//@Builder
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+@AllArgsConstructor
 public class Pancerz {
 
+    private final int SKUTECZNOSC;
+
+    /*
     final int WAGA;
     final int SKUTECZNOSC;
     final int JAKOSC;
@@ -63,4 +72,5 @@ public class Pancerz {
     public int getModZywotnosci(){
         return 0;
     }
+    /**/
 }

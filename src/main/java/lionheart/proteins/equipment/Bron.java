@@ -1,10 +1,17 @@
 package lionheart.proteins.equipment;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 
-//@Builder
+@Getter
+@Builder
+@AllArgsConstructor
 public class Bron {
 
+    private final int SKUTECZNOSC;
+
+    /*
     final int WAGA;
     final int SKUTECZNOSC;
     final int JAKOSC;
@@ -65,4 +72,5 @@ public class Bron {
         return 0;
     }
 
+/**/
 }

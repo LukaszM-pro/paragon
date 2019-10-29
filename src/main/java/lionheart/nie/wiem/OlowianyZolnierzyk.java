@@ -1,7 +1,6 @@
 package lionheart.nie.wiem;
 
 import lionheart.proteins.Warrior;
-import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
 import space.Pole;
@@ -45,8 +44,13 @@ public class OlowianyZolnierzyk<GenericTypeExtendingPole extends Pole> implement
     }
 
     @Override
-    public void setHealthActual(int newValue) {
-        myInnerWarrior.setHealthActual(newValue);
+    public int getInitiativeStep() {
+        return myInnerWarrior.getInitiativeStep();
+    }
+
+    @Override
+    public void setReceivedWounds(int newValue) {
+        myInnerWarrior.setReceivedWounds(newValue);
     }
 
     @Override

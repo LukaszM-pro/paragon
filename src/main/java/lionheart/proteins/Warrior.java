@@ -8,6 +8,7 @@ public interface Warrior {
     int getAttack();
     int getCritical();
     int getHealthActual();
-    void setHealthActual(int newValue);
+    int getInitiativeStep();
+    void setReceivedWounds(int newWounds);
 
 }

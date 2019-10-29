@@ -25,7 +25,7 @@ public class PotyczkaWojownikow {
                     result++;
                 }
             }
-            defender.setHealthActual(defender.getHealthActual() - result);
+            defender.setReceivedWounds(defender.getHealthActual() - result);
         }
     }
 
