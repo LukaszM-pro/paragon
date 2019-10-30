@@ -29,37 +29,37 @@ public class PotyczkaWojownikow {
         }
     }
 
-    public void uderzenie(Wojownik agresor, Wojownik cel) {
-        if (agresor.getCzyZyje()) {
-            int trafienie = agresor.getAtak(0) - cel.getObrona(0);
-            if (trafienie > 0) {
-                int przebicie = agresor.getPrzebicie(trafienie / KonfiguracjaL5K.KOSTKA) - cel.getWyparowanie(0);
-                if (przebicie > 0) {
-                    System.out.println(trafienie+";"+przebicie);
-                    cel.otrzymajRane(przebicie);
-                }
-            }
-        }
-    }
+//    public void uderzenie(Wojownik agresor, Wojownik cel) {
+//        if (agresor.getCzyZyje()) {
+//            int trafienie = agresor.getAtak(0) - cel.getObrona(0);
+//            if (trafienie > 0) {
+//                int przebicie = agresor.getPrzebicie(trafienie / KonfiguracjaL5K.KOSTKA) - cel.getWyparowanie(0);
+//                if (przebicie > 0) {
+//                    System.out.println(trafienie+";"+przebicie);
+//                    cel.otrzymajRane(przebicie);
+//                }
+//            }
+//        }
+//    }
 
-    public void runda_wymiana(Wojownik czerwony, Wojownik niebieski) {
-        int inicjatywaCzerwonego = czerwony.getInicjatywa(0);
-        int inicjatywaNiebieskiego = niebieski.getInicjatywa(0);
-
-        if (inicjatywaCzerwonego > inicjatywaNiebieskiego)  {
-            uderzenie(czerwony, niebieski);
-            uderzenie(niebieski, czerwony);
-        } else if (inicjatywaNiebieskiego > inicjatywaCzerwonego) {
-            uderzenie(niebieski, czerwony);
-            uderzenie(czerwony, niebieski);
-        } else {
-            return;
-        }
-
-        if (inicjatywaCzerwonego >= inicjatywaNiebieskiego * 2)  {
-            uderzenie(czerwony, niebieski);
-        } else if (inicjatywaNiebieskiego >= inicjatywaCzerwonego * 2) {
-            uderzenie(niebieski, czerwony);
-        }
-    }
+//    public void runda_wymiana(Wojownik czerwony, Wojownik niebieski) {
+//        int inicjatywaCzerwonego = czerwony.getInicjatywa(0);
+//        int inicjatywaNiebieskiego = niebieski.getInicjatywa(0);
+//
+//        if (inicjatywaCzerwonego > inicjatywaNiebieskiego)  {
+//            uderzenie(czerwony, niebieski);
+//            uderzenie(niebieski, czerwony);
+//        } else if (inicjatywaNiebieskiego > inicjatywaCzerwonego) {
+//            uderzenie(niebieski, czerwony);
+//            uderzenie(czerwony, niebieski);
+//        } else {
+//            return;
+//        }
+//
+//        if (inicjatywaCzerwonego >= inicjatywaNiebieskiego * 2)  {
+//            uderzenie(czerwony, niebieski);
+//        } else if (inicjatywaNiebieskiego >= inicjatywaCzerwonego * 2) {
+//            uderzenie(niebieski, czerwony);
+//        }
+//    }
 }

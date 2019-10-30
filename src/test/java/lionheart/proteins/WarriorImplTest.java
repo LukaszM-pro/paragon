@@ -14,32 +14,46 @@ class WarriorImplTest {
         WarriorImpl connan = WarriorImpl.builder()
             .silaWytrzymalosc(50)
             .zrecznoscZwinnosc(30)
-            .skill(25)
-            .bron(Bron.builder().SKUTECZNOSC(8).build())
-            .pancerz(Pancerz.builder().SKUTECZNOSC(50).build())
+            .skill(20)
+            .bron(Bron.builder().WAGA(5).JAKOSC(2).build())
+            .pancerz(Pancerz.builder().WAGA(50).JAKOSC(10).build())
             .build();
-        Assert.assertEquals(50,connan.getDefense());
-        Assert.assertEquals(75,connan.getHit());
-        Assert.assertEquals(16,connan.getDodge());
-        Assert.assertEquals(40,connan.getAttack());
-        Assert.assertEquals(2,connan.getCritical());
+        Assert.assertEquals(60,connan.getDefense());
+        Assert.assertEquals(70,connan.getHit());
+        Assert.assertEquals(21,connan.getDodge());
+        Assert.assertEquals(35,connan.getAttack());
+        Assert.assertEquals(6,connan.getCritical());
         Assert.assertEquals(50,connan.getHealthActual());
-        Assert.assertEquals(-5,connan.getInitiativeStep());
-
+        Assert.assertEquals(4,connan.getInitiativeStep());
 
         WarriorImpl redSonya = WarriorImpl.builder()
-            .silaWytrzymalosc(45)
-            .zrecznoscZwinnosc(35)
-            .skill(25)
-            .bron(Bron.builder().SKUTECZNOSC(7).build())
-            .pancerz(Pancerz.builder().SKUTECZNOSC(25).build())
-            .build();
+                .silaWytrzymalosc(45)
+                .zrecznoscZwinnosc(35)
+                .skill(25)
+                .bron(Bron.builder().WAGA(6).build())
+                .pancerz(Pancerz.builder().WAGA(25).build())
+                .build();
         Assert.assertEquals(25,redSonya.getDefense());
         Assert.assertEquals(70,redSonya.getHit());
-        Assert.assertEquals(22,redSonya.getDodge());
-        Assert.assertEquals(28,redSonya.getAttack());
-        Assert.assertEquals(3,redSonya.getCritical());
+        Assert.assertEquals(18,redSonya.getDodge());
+        Assert.assertEquals(24,redSonya.getAttack());
+        Assert.assertEquals(4,redSonya.getCritical());
         Assert.assertEquals(45,redSonya.getHealthActual());
-        Assert.assertEquals(0,redSonya.getInitiativeStep());
+        Assert.assertEquals(5,redSonya.getInitiativeStep());
+
+        WarriorImpl uruk = WarriorImpl.builder()
+                .silaWytrzymalosc(65)
+                .zrecznoscZwinnosc(25)
+                .skill(20)
+                .bron(Bron.builder().WAGA(2).build())
+                .pancerz(Pancerz.builder().WAGA(75).build())
+                .build();
+        Assert.assertEquals(75,uruk.getDefense());
+        Assert.assertEquals(45,uruk.getHit());
+        Assert.assertEquals(7,uruk.getDodge());
+        Assert.assertEquals(12,uruk.getAttack());
+        Assert.assertEquals(7,uruk.getCritical());
+        Assert.assertEquals(65,uruk.getHealthActual());
+        Assert.assertEquals(1,uruk.getInitiativeStep());
     }
 }

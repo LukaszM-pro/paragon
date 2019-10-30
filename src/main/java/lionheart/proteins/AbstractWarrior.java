@@ -1,5 +1,6 @@
 package lionheart.proteins;
 
+import lionheart.config.ConfigLionheart;
 import lionheart.proteins.equipment.Bron;
 import lionheart.proteins.equipment.Pancerz;
 import lombok.Data;
@@ -27,6 +28,18 @@ public abstract class AbstractWarrior{
     private int skill;
     private Bron bron;
     private Pancerz pancerz;
+
+    public int getModSilaWytrzymalosc(){
+        return silaWytrzymalosc / ConfigLionheart.DZIELNIK_BC_KR;
+    }
+
+    public int getModZrecznoscZwinnosc(){
+        return zrecznoscZwinnosc / ConfigLionheart.DZIELNIK_BC_KR;
+    }
+
+    public int getModSkill(){
+        return skill / ConfigLionheart.DZIELNIK_SKL_EQ;
+    }
 
 /*
     protected AbstractWarrior(AbstractWarriorBuilder<?, ?> b) {
