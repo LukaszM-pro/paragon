@@ -1,6 +1,8 @@
 package lionheart.proteins;
 
+import lionheart.proteins.equipment.Armor;
 import lionheart.proteins.equipment.ArmorImpl;
+import lionheart.proteins.equipment.Weapon;
 import lionheart.proteins.equipment.WeaponImpl;
 import lombok.experimental.SuperBuilder;
 
@@ -10,7 +12,7 @@ public abstract class AbstractSoldier {
     int reflex;
     int dexterity;
     int agility;
-    int strenhgt;
+    int strength;
     int endurance;
     int vitality;
 
@@ -18,8 +20,8 @@ public abstract class AbstractSoldier {
     int offensive;
     int defensive;
 
-    WeaponImpl weapon;
-    ArmorImpl armor;
+    Weapon weapon;
+    Armor armor;
 
     int size;
 }

@@ -20,11 +20,11 @@ class WarriorImplTest {
             .build();
         Assert.assertEquals(60,connan.getDefense());
         Assert.assertEquals(70,connan.getHit());
-        Assert.assertEquals(21,connan.getDodge());
+        Assert.assertEquals(12,connan.getDodge());
         Assert.assertEquals(35,connan.getAttack());
-        Assert.assertEquals(6,connan.getCritical());
+        Assert.assertEquals(9,connan.getCritical());
         Assert.assertEquals(50,connan.getHealthActual());
-        Assert.assertEquals(4,connan.getInitiativeStep());
+        Assert.assertEquals(5,connan.getInitiativeStep());
 
         WarriorImpl redSonya = WarriorImpl.builder()
                 .silaWytrzymalosc(45)
@@ -35,9 +35,9 @@ class WarriorImplTest {
                 .build();
         Assert.assertEquals(25,redSonya.getDefense());
         Assert.assertEquals(70,redSonya.getHit());
-        Assert.assertEquals(18,redSonya.getDodge());
+        Assert.assertEquals(12,redSonya.getDodge());
         Assert.assertEquals(24,redSonya.getAttack());
-        Assert.assertEquals(4,redSonya.getCritical());
+        Assert.assertEquals(6,redSonya.getCritical());
         Assert.assertEquals(45,redSonya.getHealthActual());
         Assert.assertEquals(5,redSonya.getInitiativeStep());
 
@@ -50,10 +50,10 @@ class WarriorImplTest {
                 .build();
         Assert.assertEquals(75,uruk.getDefense());
         Assert.assertEquals(45,uruk.getHit());
-        Assert.assertEquals(7,uruk.getDodge());
+        Assert.assertEquals(11,uruk.getDodge());
         Assert.assertEquals(12,uruk.getAttack());
-        Assert.assertEquals(7,uruk.getCritical());
+        Assert.assertEquals(10,uruk.getCritical());
         Assert.assertEquals(65,uruk.getHealthActual());
-        Assert.assertEquals(1,uruk.getInitiativeStep());
+        Assert.assertEquals(7,uruk.getInitiativeStep());
     }
 }
