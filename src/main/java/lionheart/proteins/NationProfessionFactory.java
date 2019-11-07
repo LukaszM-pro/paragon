@@ -7,9 +7,10 @@ import lionheart.proteins.equipment.WeaponImpl;
 
 public class NationProfessionFactory {
 
-    public NationProfession getNation (String id) {
+    public static NationProfession getNation (String id) {
         NationProfession result;
         if (id.equalsIgnoreCase("Kitsune")) {
+//            System.out.println("lis");
             result = NationProfession.builder()
                     .reflex(0)
                     .dexterity(0)
@@ -20,11 +21,10 @@ public class NationProfessionFactory {
                     .speed(0)
                     .offensive(-1)
                     .defensive(0)
-//                    .weapon(null)
-//                    .armor(null)
                     .size(3)
                     .build();
         } else if (id.equalsIgnoreCase("Tengu")) {
+//            System.out.println("kruk");
             result = NationProfession.builder()
                     .reflex(1)
                     .dexterity(0)
@@ -35,11 +35,10 @@ public class NationProfessionFactory {
                     .speed(0)
                     .offensive(0)
                     .defensive(0)
-//                    .weapon(null)
-//                    .armor(null)
                     .size(3)
                     .build();
         } else if (id.equalsIgnoreCase("Oni")) {
+//            System.out.println("oni");
             result = NationProfession.builder()
                     .reflex(0)
                     .dexterity(0)
@@ -50,11 +49,10 @@ public class NationProfessionFactory {
                     .speed(-1)
                     .offensive(0)
                     .defensive(0)
-//                    .weapon(null)
-//                    .armor(null)
                     .size(4)
                     .build();
         } else {
+//            System.out.println("else");
             result = NationProfession.builder()
                     .reflex(0)
                     .dexterity(0)
@@ -65,32 +63,31 @@ public class NationProfessionFactory {
                     .speed(0)
                     .offensive(0)
                     .defensive(0)
-                    .weapon(null)
-                    .armor(null)
-                    .size(0)
+                    .size(3)
                     .build();
         }
         return result;
     }
 
-    public NationProfession getProfession (String id) {
+    public static NationProfession getProfession (String id) {
         NationProfession result;
         if (id.equalsIgnoreCase("Ashigaru")) {
+//            System.out.println("asz");
             result = NationProfession.builder()
                     .reflex(0)
                     .dexterity(0)
                     .agility(0)
                     .strength(0)
                     .endurance(0)
-                    .vitality(0)
+                    .vitality(1)
                     .speed(0)
-                    .offensive(1)
-                    .defensive(2)
+                    .offensive(2)
+                    .defensive(3)
                     .weapon(EquipmentFactory.getWeapon("Naginata"))
                     .armor(EquipmentFactory.getArmor("Leather"))
-//                    .size(0)
                     .build();
-        } else if (id.equalsIgnoreCase("Samuraj")) {
+        } else if (id.equalsIgnoreCase("Samurai") || id.equalsIgnoreCase("Samuraj")) {
+//            System.out.println("sam");
             result = NationProfession.builder()
                     .reflex(0)
                     .dexterity(1)
@@ -103,9 +100,9 @@ public class NationProfessionFactory {
                     .defensive(4)
                     .weapon(EquipmentFactory.getWeapon("Katana"))
                     .armor(EquipmentFactory.getArmor("Chainmail"))
-//                    .size()
                     .build();
         } else {
+//            System.out.println("else");
             result = NationProfession.builder()
                     .reflex(0)
                     .dexterity(0)
@@ -118,7 +115,6 @@ public class NationProfessionFactory {
                     .defensive(0)
                     .weapon(EquipmentFactory.getWeapon("Wakizashi"))
                     .armor(EquipmentFactory.getArmor("Leather"))
-//                    .size(0)
                     .build();
         }
         return result;

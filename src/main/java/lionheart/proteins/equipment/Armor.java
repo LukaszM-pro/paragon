@@ -1,8 +1,5 @@
 package lionheart.proteins.equipment;
 
-public interface Armor {
-
-    int getEfficiency();
-    int getQuality();
+public interface Armor extends Equipment{
 
 }

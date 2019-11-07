@@ -2,13 +2,15 @@ package lionheart.dice.mechanics;
 
 import dice.mechanics.myExceptions.L5KProblemException;
 import l5k.config.KonfiguracjaL5K;
+import lionheart.config.ConfigurationL5K;
+
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ThrowL5R {
 
 //    private static final int K10 = Kostki.Kosci.K10.getScianki();
-    private static final int KOSTKA = KonfiguracjaL5K.KOSTKA;
+    private static final int KOSTKA = ConfigurationL5K.DICE;
 
     private static int rzut(int scianki) {
         int r = ThreadLocalRandom.current().nextInt(scianki) + 1;
@@ -46,10 +48,21 @@ public class ThrowL5R {
     }
 
     public static int l5K(int za, int rz, int mod) {
-        return throwL5K(za, rz, mod, KonfiguracjaL5K.KOSTKA);
+        return throwL5K(za, rz, mod, ConfigurationL5K.DICE);
     }
 
     public static int l5K(int za, int rz) {
-        return throwL5K(za, rz, 0, KonfiguracjaL5K.KOSTKA);
+        int za_ = Math.min(za,rz);
+        return throwL5K(za_, rz, ConfigurationL5K.DICE);
+    }
+
+    public static int statisticsDeviation(int param) {
+        int r = 0;
+        for (int i = 1; i <= param; i++) {
+            int a = ThreadLocalRandom.current().nextInt(2);
+//            System.out.println(a);
+            r += a;
+        }
+        return r - param / 2;
     }
 }

@@ -18,8 +18,14 @@ public class EquipmentFactory {
                     .build();
         } else if (id.equalsIgnoreCase("Nodachi")) {
             result = WeaponImpl.builder()
-                    .efficiency(4)
+                    .efficiency(3)
                     .quality(0)
+                    .range(1)
+                    .build();
+        } else if (id.equalsIgnoreCase("Masakari")) {
+            result = WeaponImpl.builder()
+                    .efficiency(4)
+                    .quality(-2)
                     .range(1)
                     .build();
         } else if (id.equalsIgnoreCase("Naginata")) {
@@ -54,7 +60,7 @@ public class EquipmentFactory {
         } else if (id.equalsIgnoreCase("Reinforced leather")) {
             result = ArmorImpl.builder()
                     .efficiency(1)
-                    .quality(1)
+                    .quality(0)
                     .build();
         } else if (id.equalsIgnoreCase("Chainmail")) {
             result = ArmorImpl.builder()
@@ -64,7 +70,7 @@ public class EquipmentFactory {
         } else if (id.equalsIgnoreCase("Lamellar")) {
             result = ArmorImpl.builder()
                     .efficiency(2)
-                    .quality(2)
+                    .quality(0)
                     .build();
         } else if (id.equalsIgnoreCase("Plate")) {
             result = ArmorImpl.builder()

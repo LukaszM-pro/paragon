@@ -1,14 +1,9 @@
 package lionheart.proteins.equipment;
 
+public interface Equipment {
 
-import lombok.Data;
-import lombok.experimental.SuperBuilder;
-
-@Data
-@SuperBuilder
-public class Equipment {
-
-    protected int efficiency;
-    protected int quality;
+    int getEfficiency();
+    int getQuality();
+    int getWeight();
 
 }
