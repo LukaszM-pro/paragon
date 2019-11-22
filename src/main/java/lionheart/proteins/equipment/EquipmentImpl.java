@@ -11,9 +11,15 @@ public abstract class EquipmentImpl {
 
     protected int efficiency;
     protected int quality;
-    protected int weight;
+//    protected int weight;
     public int getWeight(){
-        return Math.min(Math.max(efficiency/2-1, efficiency-quality/2 - ConfigurationL5K.EQUIPMENT_WEIGHT_QUALIFIER), efficiency*2);
+        return Math.min(
+            Math.max(
+                efficiency/2-1,
+                efficiency-quality/2 - ConfigurationL5K.EQUIPMENT_WEIGHT_QUALIFIER
+            ),
+            efficiency*2
+        );
     }
 
 }

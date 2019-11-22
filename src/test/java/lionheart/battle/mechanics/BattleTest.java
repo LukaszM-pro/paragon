@@ -27,7 +27,7 @@ class BattleTest {
         Assert.assertTrue(a.getSoldiers().stream().filter(Soldier::getIfAlive).count() <= aQuantity);
         Assert.assertTrue(b.getSoldiers().stream().filter(Soldier::getIfAlive).count() <= bQuantity);
 
-        System.out.println(a.getSoldiers().stream().filter(Soldier::getIfAlive).count());
-        System.out.println(b.getSoldiers().stream().filter(Soldier::getIfAlive).count());
+//        System.out.println(a.getSoldiers().stream().filter(Soldier::getIfAlive).count());
+//        System.out.println(b.getSoldiers().stream().filter(Soldier::getIfAlive).count());
     }
 }

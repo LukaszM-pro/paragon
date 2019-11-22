@@ -6,7 +6,7 @@ import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 @Data
-public class WeaponImpl extends EquipmentImpl implements Armor, Weapon {
+public class WeaponImpl extends EquipmentImpl implements Weapon {
 
     protected int range;
 

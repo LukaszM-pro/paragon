@@ -10,7 +10,7 @@ class ThrowL5RTest {
 
     @Test
     void throwL5kTest() {
-        int v = 1;
+        int v = 10;
         int k = 12;
 //        int k = 10;
 //        int z = 1;
@@ -50,8 +50,11 @@ class ThrowL5RTest {
                 if (z <= r) {
                     int z_ = z;
                     int r_ = r;
-                    double[] a10 = DoubleStream.generate(()-> ThrowL5R.throwL5K(z_,r_,m,k)).parallel().limit(v).sorted().toArray();
-                    arr[z-1][r-1] = (a10[(v-2)/2] + a10[v/2]) / 2.0;
+//                    double[] a10 = DoubleStream.generate(()-> ThrowL5R.throwL5K(z_,r_,m,k)).parallel().limit(v).sorted().toArray();
+                    arr[z-1][r-1] = DoubleStream.generate(()-> ThrowL5R.throwL5K(z_,r_,m,k)).parallel().limit(v).average().getAsDouble()
+//                        (a10[(v-2)/2] + a10[v/2]) / 2.0
+                    ;
+
                 }
             }
 //            System.out.println(Arrays.toString(arr[z-1]));
